@@ -13,14 +13,14 @@ This repository represents a collection of **original research and development p
 
 ---
 
-## 🏆 **Breakthrough Projects**
+## 🏆 **Personal Projects**
 
 ### 🛠️ **PrismForge - Revolutionary Visual Development IDE**
 **`PrismForge.html`** | **Status: Production-Grade Research Tool**
 
 A groundbreaking visual code builder that generates clean, exportable code through an intuitive drag-and-drop interface.
 
-**🚀 Innovation Achievements:**
+**🚀Achievements:**
 - **Real-time Code Generation**: Live HTML/CSS/JS/React compilation
 - **Professional IDE Interface**: Resizable panels, breadcrumb navigation, syntax highlighting
 - **Template System**: Multi-domain templates (e-commerce, dashboard, blog, portfolio)
