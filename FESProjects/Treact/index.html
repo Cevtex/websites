@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META TAGS AND DOCUMENT SETUP -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treact - Beautiful React Templates</title>
+    
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- LANDING SECTION - Top of page with navigation and hero -->
+    <section id="landing">
+        <!-- NAVIGATION BAR -->
+        <nav>
+            <div class="row nav__row">
+                <!-- LOGO AND BRAND NAME -->
+                <div class="nav__logo">
+                    <img src="https://treact.owaiskhan.me/static/media/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="Treact Logo" style="height: 32px;">
+                    <h2 style="margin-left: 12px; font-weight: 900;">Treact</h2>
+                </div>
+                
+                <!-- DESKTOP NAVIGATION LINKS (hidden on mobile) -->
+                <ul class="nav__links" style="display: flex; list-style: none; margin: 0; padding: 0; align-items: center;">
+                    <li style="margin: 0 24px;"><a href="#about" style="text-decoration: none; font-weight: 600; color: #243e63; border-bottom: 2px solid transparent; padding-bottom: 4px;">About</a></li>
+                    <li style="margin: 0 24px;"><a href="#blog" style="text-decoration: none; font-weight: 600; color: #243e63; border-bottom: 2px solid transparent; padding-bottom: 4px;">Blog</a></li>
+                    <li style="margin: 0 24px;"><a href="#pricing" style="text-decoration: none; font-weight: 600; color: #243e63; border-bottom: 2px solid transparent; padding-bottom: 4px;">Pricing</a></li>
+                    <li style="margin: 0 24px;"><a href="#contact" style="text-decoration: none; font-weight: 600; color: #243e63; border-bottom: 2px solid transparent; padding-bottom: 4px;">Contact Us</a></li>
+                    <li style="margin: 0 24px;"><a href="#login" style="text-decoration: none; font-weight: 600; color: #243e63; border-bottom: 2px solid transparent; padding-bottom: 4px;">Login</a></li>
+                    <li style="margin-left: 24px;"><a href="#signup" style="text-decoration: none; font-weight: 600; color: #f7fafc; padding: 12px 32px; background: #6415ff; border-radius: 500px; border: none;">Sign Up</a></li>
+                </ul>
+                
+                <!-- MOBILE HAMBURGER MENU BUTTON (hidden on desktop) -->
+                <button class="btn__menu" onclick="openMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="btn__menu--svg">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- MOBILE MENU MODAL (shown when hamburger is clicked) -->
+        <div class="modal">
+            <!-- CLOSE BUTTON FOR MOBILE MENU -->
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="light___StyledCloseIcon-lj69nl-14 fASujC">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <!-- MOBILE MENU NAVIGATION LINKS -->
+            <div class="modal__links">
+                <a class="modal__link">About</a>
+                <a class="modal__link">Blog</a>
+                <a class="modal__link">Pricing</a>
+                <a class="modal__link">Contact Us</a>
+                <a class="modal__link">Login</a>
+                <a class="modal__link modal__link--primary">Sign Up</a>
+            </div>
+        </div>
+        
+        <!-- HERO SECTION - Main landing content -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <!-- LEFT SIDE - Text content and email form -->
+                    <div class="header__content" style="width: 40%; display: flex; flex-direction: column;">
+                        <!-- MAIN HEADLINE -->
+                        <h1 style="font-size: 48px; font-weight: 900; margin: 0 0 32px 0; line-height: 1.25;">
+                            Beautiful React Templates <span class="purple">for you.</span>
+                        </h1>
+                        
+                        <!-- SUBTITLE/DESCRIPTION -->
+                        <p style="font-size: 18px; margin: 0 0 32px 0; line-height: 1.5; opacity: 0.8;">
+                            Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.
+                        </p>
+                        
+                        <!-- EMAIL SIGNUP FORM -->
+                        <div class="email__form" style="position: relative; max-width: 448px;">
+                            <input type="email" placeholder="Your E-mail Address" style="width: 100%; padding: 20px 192px 20px 32px; border: 2px solid #e5e7eb; border-radius: 500px; font-size: 16px; font-weight: 500;">
+                            <button style="position: absolute; right: 8px; top: 8px; bottom: 8px; background: #6415ff; color: white; border: none; padding: 16px 32px; border-radius: 500px; font-weight: 700; cursor: pointer;">Get Started</button>
+                        </div>
+                        
+                        <!-- CUSTOMER LOGOS SECTION -->
+                        <div class="customers" style="margin-top: 80px;">
+                            <p style="font-size: 12px; font-weight: 700; color: #a0aec0; margin-bottom: 16px; letter-spacing: 1.6px;">OUR TRUSTED CUSTOMERS</p>
+                            <img src="https://treact.owaiskhan.me/static/media/customers-logo-strip.680ac7c2e566285cdaf9.png" alt="Customer logos" style="opacity: 0.5; width: 100%;">
+                        </div>
+                    </div>
+                    
+                    <!-- RIGHT SIDE - Hero illustration -->
+                    <div class="header__img" style="width: 60%;">
+                        <img src="https://treact.owaiskhan.me/static/media/design-illustration-2.6da6a00320b07a017184aef3a3e69f11.svg" alt="Design illustration" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+    <!-- MAIN CONTENT SECTIONS -->
+    <main>
+        <!-- FEATURES SECTION - Services grid -->
+        <section id="features">
+            <div class="container">
+                <div class="row__narrow">
+                    <!-- SECTION HEADER -->
+                    <div class="features__header" style="text-align: center; margin-bottom: 48px;">
+                        <h5 style="font-size: 16px; font-weight: 700; color: #6415ff; margin: 0 0 16px 0; letter-spacing: 1.6px;">FEATURES</h5>
+                        <h2 style="font-size: 48px; font-weight: 900; margin: 0 0 16px 0; color: #243e63;">We have Amazing <span class="purple">Service.</span></h2>
+                        <p style="font-size: 18px; color: #7c8ba1; line-height: 1.5; max-width: 576px; margin: 0 auto;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    
+                    <!-- SERVICES GRID (3 columns, 2 rows) -->
+                    <div class="services" style="display: flex; flex-wrap: wrap;">
+                        <!-- SERVICE 1: Secure -->
+                        <div class="service" style="display: flex; width: calc(100%/3); padding: 32px 24px;">
+                            <div class="service__icon" style="margin-right: 16px;">
+                                <div style="width: 64px; height: 64px; background: #6415ff; border-radius: 500px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-shield-alt" style="color: white; font-size: 24px;"></i>
+                                </div>
+                            </div>
+                            <div class="service__description" style="display: flex; flex-direction: column;">
+                                <h4 style="font-size: 24px; font-weight: 700; margin: 0 0 16px 0; color: #243e63;">Secure</h4>
+                                <p style="color: #718096; line-height: 1.5; margin: 0;">We strictly only deal with vendors that provide top notch security.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- SERVICE 2: 24/7 Support -->
+                        <div class="service" style="display: flex; width: calc(100%/3); padding: 32px 24px;">
+                            <div class="service__icon" style="margin-right: 16px;">
+                                <div style="width: 64px; height: 64px; background: #6415ff; border-radius: 500px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-headset" style="color: white; font-size: 24px;"></i>
+                                </div>
+                            </div>
+                            <div class="service__description" style="display: flex; flex-direction: column;">
+                                <h4 style="font-size: 24px; font-weight: 700; margin: 0 0 16px 0; color: #243e63;">24/7 Support</h4>
+                                <p style="color: #718096; line-height: 1.5; margin: 0;">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- SERVICE 3: Customizable -->
+                        <div class="service" style="display: flex; width: calc(100%/3); padding: 32px 24px;">
+                            <div class="service__icon" style="margin-right: 16px;">
+                                <div style="width: 64px; height: 64px; background: #6415ff; border-radius: 500px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-sliders-h" style="color: white; font-size: 24px;"></i>
+                                </div>
+                            </div>
+                            <div class="service__description" style="display: flex; flex-direction: column;">
+                                <h4 style="font-size: 24px; font-weight: 700; margin: 0 0 16px 0; color: #243e63;">Customizable</h4>
+                                <p style="color: #718096; line-height: 1.5; margin: 0;">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- SERVICE 4: Reliable -->
+                        <div class="service" style="display: flex; width: calc(100%/3); padding: 32px 24px;">
+                            <div class="service__icon" style="margin-right: 16px;">
+                                <div style="width: 64px; height: 64px; background: #6415ff; border-radius: 500px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-check-circle" style="color: white; font-size: 24px;"></i>
+                                </div>
+                            </div>
+                            <div class="service__description" style="display: flex; flex-direction: column;">
+                                <h4 style="font-size: 24px; font-weight: 700; margin: 0 0 16px 0; color: #243e63;">Reliable</h4>
+                                <p style="color: #718096; line-height: 1.5; margin: 0;">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- SERVICE 5: Fast -->
+                        <div class="service" style="display: flex; width: calc(100%/3); padding: 32px 24px;">
+                            <div class="service__icon" style="margin-right: 16px;">
+                                <div style="width: 64px; height: 64px; background: #6415ff; border-radius: 500px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-bolt" style="color: white; font-size: 24px;"></i>
+                                </div>
+                            </div>
+                            <div class="service__description" style="display: flex; flex-direction: column;">
+                                <h4 style="font-size: 24px; font-weight: 700; margin: 0 0 16px 0; color: #243e63;">Fast</h4>
+                                <p style="color: #718096; line-height: 1.5; margin: 0;">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- SERVICE 6: Easy -->
+                        <div class="service" style="display: flex; width: calc(100%/3); padding: 32px 24px;">
+                            <div class="service__icon" style="margin-right: 16px;">
+                                <div style="width: 64px; height: 64px; background: #6415ff; border-radius: 500px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-smile" style="color: white; font-size: 24px;"></i>
+                                </div>
+                            </div>
+                            <div class="service__description" style="display: flex; flex-direction: column;">
+                                <h4 style="font-size: 24px; font-weight: 700; margin: 0 0 16px 0; color: #243e63;">Easy</h4>
+                                <p style="color: #718096; line-height: 1.5; margin: 0;">Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- QUALITY WORK SECTION - Two column layout with text and image -->
+        <section id="quality">
+            <div class="container">
+                <div class="row">
+                    <!-- LEFT SIDE - Text content -->
+                    <div class="quality__content" style="width: 50%; display: flex; flex-direction: column; padding-right: 64px;">
+                        <h5 style="font-size: 16px; font-weight: 700; color: #6415ff; margin: 0 0 16px 0; letter-spacing: 1.6px;">QUALITY WORK</h5>
+                        <h2 style="font-size: 48px; font-weight: 900; margin: 0 0 32px 0; color: #243e63; line-height: 1.25;">Designed & Developed by <span class="purple">Professionals.</span></h2>
+                        <p style="font-size: 18px; color: #7c8ba1; line-height: 1.5; margin: 0 0 32px 0;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <button style="background: #6415ff; color: white; border: none; padding: 16px 32px; border-radius: 500px; font-weight: 700; font-size: 16px; cursor: pointer; align-self: flex-start;">Learn More</button>
+                    </div>
+                    
+                    <!-- RIGHT SIDE - Screenshot image -->
+                    <div class="quality__img" style="width: 50%;">
+                        <img src="https://treact.owaiskhan.me/static/media/hero-screenshot-1.40a097b525c2f8c9808e7.png" alt="Quality work screenshot" style="width: 100%; border: 1px solid #e5e7eb; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- STEPS SECTION - Three step process with illustration -->
+        <section id="steps">
+            <div class="container">
+                <div class="row">
+                    <!-- LEFT SIDE - Laptop illustration -->
+                    <div class="steps__img" style="width: 50%; padding-right: 64px;">
+                        <img src="https://treact.owaiskhan.me/static/media/hero-screenshot-2.241aac1fbc66db29d873.png" alt="Steps illustration" style="width: 100%;">
+                    </div>
+                    
+                    <!-- RIGHT SIDE - Step-by-step list -->
+                    <div class="steps__content" style="width: 50%; display: flex; flex-direction: column;">
+                        <h5 style="font-size: 16px; font-weight: 700; color: #6415ff; margin: 0 0 16px 0; letter-spacing: 1.6px;">STEPS</h5>
+                        <h2 style="font-size: 48px; font-weight: 900; margin: 0 0 32px 0; color: #243e63; line-height: 1.25;">Easy to <span class="purple">Get Started.</span></h2>
+                        
+                        <div class="steps__list">
+                            <!-- STEP 1: Register -->
+                            <div class="step" style="display: flex; margin-bottom: 32px;">
+                                <div class="step__number" style="font-size: 36px; font-weight: 600; color: #cbd5e0; margin-right: 24px; line-height: 1;">01</div>
+                                <div class="step__content">
+                                    <h4 style="font-size: 20px; font-weight: 600; margin: 0 0 12px 0; color: #243e63;">Register</h4>
+                                    <p style="color: #718096; line-height: 1.5; margin: 0;">Create an account with us using Google or Facebook.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- STEP 2: Download -->
+                            <div class="step" style="display: flex; margin-bottom: 32px;">
+                                <div class="step__number" style="font-size: 36px; font-weight: 600; color: #cbd5e0; margin-right: 24px; line-height: 1;">02</div>
+                                <div class="step__content">
+                                    <h4 style="font-size: 20px; font-weight: 600; margin: 0 0 12px 0; color: #243e63;">Download</h4>
+                                    <p style="color: #718096; line-height: 1.5; margin: 0;">Browse and Download the template that you like from the marketplace.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- STEP 3: Run -->
+                            <div class="step" style="display: flex;">
+                                <div class="step__number" style="font-size: 36px; font-weight: 600; color: #cbd5e0; margin-right: 24px; line-height: 1;">03</div>
+                                <div class="step__content">
+                                    <h4 style="font-size: 20px; font-weight: 600; margin: 0 0 12px 0; color: #243e63;">Run</h4>
+                                    <p style="color: #718096; line-height: 1.5; margin: 0;">Follow the instructions to setup and customize the template to your needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- VALUES SECTION - Company principles with icons -->
+        <section id="values">
+            <div class="container">
+                <div class="row">
+                    <!-- LEFT SIDE - Text content and values list -->
+                    <div class="values__content" style="width: 50%; display: flex; flex-direction: column; padding-right: 64px;">
+                        <h5 style="font-size: 16px; font-weight: 700; color: #6415ff; margin: 0 0 16px 0; letter-spacing: 1.6px;">VALUES</h5>
+                        <h2 style="font-size: 48px; font-weight: 900; margin: 0 0 32px 0; color: #243e63; line-height: 1.25;">We Always Abide by Our <span class="purple">Principles.</span></h2>
+                        <p style="font-size: 18px; color: #7c8ba1; line-height: 1.5; margin: 0 0 32px 0;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        
+                        <div class="values__list">
+                            <!-- VALUE 1: Affordable -->
+                            <div class="value" style="display: flex; margin-bottom: 32px;">
+                                <div class="value__icon" style="margin-right: 16px;">
+                                    <div style="width: 48px; height: 48px; background: #9ae6b4; border-radius: 500px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-dollar-sign" style="color: #276749; font-size: 20px;"></i>
+                                    </div>
+                                </div>
+                                <div class="value__content">
+                                    <h4 style="font-size: 20px; font-weight: 700; margin: 0 0 12px 0; color: #243e63;">Affordable</h4>
+                                    <p style="color: #718096; line-height: 1.5; margin: 0;">We promise to offer you the best rate we can - at par with the industry standard.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- VALUE 2: Professionalism -->
+                            <div class="value" style="display: flex;">
+                                <div class="value__icon" style="margin-right: 16px;">
+                                    <div style="width: 48px; height: 48px; background: #feb2b2; border-radius: 500px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-briefcase" style="color: #c53030; font-size: 20px;"></i>
+                                    </div>
+                                </div>
+                                <div class="value__content">
+                                    <h4 style="font-size: 20px; font-weight: 700; margin: 0 0 12px 0; color: #243e63;">Professionalism</h4>
+                                    <p style="color: #718096; line-height: 1.5; margin: 0;">We assure you that our templates are designed and created by professional designers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button style="background: #6415ff; color: white; border: none; padding: 16px 32px; border-radius: 500px; font-weight: 700; font-size: 16px; cursor: pointer; align-self: flex-start; margin-top: 16px;">Learn More</button>
+                    </div>
+                    
+                    <!-- RIGHT SIDE - Values illustration -->
+                    <div class="values__img" style="width: 50%;">
+                        <img src="https://treact.owaiskhan.me/static/media/prototype-illustration.21bc4b3f62e4baf56553.svg" alt="Values illustration" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PRICING SECTION - Three pricing tiers -->
+        <section id="pricing">
+            <div class="container">
+                <div class="row">
+                    <!-- SECTION HEADER -->
+                    <div class="pricing__header" style="text-align: center; margin-bottom: 48px;">
+                        <h5 style="font-size: 16px; font-weight: 700; color: #6415ff; margin: 0 0 16px 0; letter-spacing: 1.6px;">PRICING</h5>
+                        <h2 style="font-size: 48px; font-weight: 900; margin: 0 0 16px 0; color: #243e63;">Reasonable & Flexible <span class="purple">Plans.</span></h2>
+                        <p style="font-size: 18px; color: #7c8ba1; line-height: 1.5; max-width: 576px; margin: 0 auto;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    
+                    <!-- PRICING PLANS GRID (3 columns) -->
+                    <div class="plans" style="display: flex; flex-wrap: wrap;">
+                        <!-- PLAN 1: Personal -->
+                        <div class="plan" style="width: calc(100%/3); display: flex; flex-direction: column; padding: 8px;">
+                            <div class="plan__card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 64px 32px; position: relative; background: white; text-align: center;">
+                                <div class="plan__header">
+                                    <div style="height: 4px; background: #68d391; border-radius: 500px; margin-bottom: 32px;"></div>
+                                    <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 8px 0; color: #1a202c;">PERSONAL</h3>
+                                    <p style="font-size: 48px; font-weight: 700; margin: 0; color: #1a202c;">$17.99</p>
+                                    <p style="font-size: 16px; color: #a0aec0; font-weight: 700; margin: 4px 0 0 0; letter-spacing: 1.6px;">MONTHLY</p>
+                                </div>
+                                <div class="plan__features" style="margin: 32px 0;">
+                                    <p style="font-size: 20px; font-weight: 700; margin: 0 0 20px 0; color: #1a202c;">For Individuals</p>
+                                    <p style="margin: 20px 0; color: #718096;">30 Templates</p>
+                                    <p style="margin: 20px 0; color: #718096;">7 Landing Pages</p>
+                                    <p style="margin: 20px 0; color: #718096;">12 Internal Pages</p>
+                                    <p style="margin: 20px 0; color: #718096;">Basic Assistance</p>
+                                </div>
+                                <button style="background: #56cc9d; color: white; border: none; padding: 16px 32px; border-radius: 500px; font-weight: 700; font-size: 14px; cursor: pointer; width: 100%; letter-spacing: 1.6px;">BUY NOW</button>
+                            </div>
+                        </div>
+                        
+                        <!-- PLAN 2: Business (Featured/Highlighted) -->
+                        <div class="plan" style="width: calc(100%/3); display: flex; flex-direction: column; padding: 8px;">
+                            <div class="plan__card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 64px 32px; position: relative; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); text-align: center; color: white;">
+                                <div class="plan__header">
+                                    <div style="height: 4px; background: white; border-radius: 500px; margin-bottom: 32px;"></div>
+                                    <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 8px 0;">BUSINESS</h3>
+                                    <p style="font-size: 48px; font-weight: 700; margin: 0;">$37.99</p>
+                                    <p style="font-size: 16px; color: #e2e8f0; font-weight: 700; margin: 4px 0 0 0; letter-spacing: 1.6px;">MONTHLY</p>
+                                </div>
+                                <div class="plan__features" style="margin: 32px 0;">
+                                    <p style="font-size: 20px; font-weight: 700; margin: 0 0 20px 0;">For Small Businesses</p>
+                                    <p style="margin: 20px 0; color: #e2e8f0;">60 Templates</p>
+                                    <p style="margin: 20px 0; color: #e2e8f0;">15 Landing Pages</p>
+                                    <p style="margin: 20px 0; color: #e2e8f0;">22 Internal Pages</p>
+                                    <p style="margin: 20px 0; color: #e2e8f0;">Priority Assistance</p>
+                                </div>
+                                <button style="background: white; color: #6415ff; border: none; padding: 16px 32px; border-radius: 500px; font-weight: 700; font-size: 14px; cursor: pointer; width: 100%; letter-spacing: 1.6px;">BUY NOW</button>
+                            </div>
+                        </div>
+                        
+                        <!-- PLAN 3: Enterprise -->
+                        <div class="plan" style="width: calc(100%/3); display: flex; flex-direction: column; padding: 8px;">
+                            <div class="plan__card" style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 64px 32px; position: relative; background: white; text-align: center;">
+                                <div class="plan__header">
+                                    <div style="height: 4px; background: #f56565; border-radius: 500px; margin-bottom: 32px;"></div>
+                                    <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 8px 0; color: #1a202c;">ENTERPRISE</h3>
+                                    <p style="font-size: 48px; font-weight: 700; margin: 0; color: #1a202c;">$57.99</p>
+                                    <p style="font-size: 16px; color: #a0aec0; font-weight: 700; margin: 4px 0 0 0; letter-spacing: 1.6px;">MONTHLY</p>
+                                </div>
+                                <div class="plan__features" style="margin: 32px 0;">
+                                    <p style="font-size: 20px; font-weight: 700; margin: 0 0 20px 0; color: #1a202c;">For Large Companies</p>
+                                    <p style="margin: 20px 0; color: #718096;">90 Templates</p>
+                                    <p style="margin: 20px 0; color: #718096;">27 Landing Pages</p>
+                                    <p style="margin: 20px 0; color: #718096;">37 Internal Pages</p>
+                                    <p style="margin: 20px 0; color: #718096;">Personal Assistance</p>
+                                </div>
+                                <button style="background: #f56565; color: white; border: none; padding: 16px 32px; border-radius: 500px; font-weight: 700; font-size: 14px; cursor: pointer; width: 100%; letter-spacing: 1.6px;">BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TESTIMONIALS SECTION - Customer review with navigation -->
+        <section id="testimonials">
+            <div class="container">
+                <div class="row">
+                    <!-- LEFT SIDE - Testimonial content -->
+                    <div class="testimonials__content" style="width: 50%; padding-right: 64px;">
+                        <h5 style="font-size: 16px; font-weight: 700; color: #6415ff; margin: 0 0 16px 0; letter-spacing: 1.6px;">TESTIMONIALS</h5>
+                        <h2 style="font-size: 48px; font-weight: 900; margin: 0 0 32px 0; color: #243e63; line-height: 1.25;">Our Clients <span class="purple">Love Us.</span></h2>
+                        <p style="font-size: 18px; color: #7c8ba1; line-height: 1.5; margin: 0 0 40px 0;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.
+                        </p>
+                        
+                        <!-- TESTIMONIAL CARD -->
+                        <div class="testimonial">
+                            <!-- 5-STAR RATING -->
+                            <div class="stars" style="margin-bottom: 16px;">
+                                <i class="fas fa-star" style="color: #f6ad55; margin-right: 4px;"></i>
+                                <i class="fas fa-star" style="color: #f6ad55; margin-right: 4px;"></i>
+                                <i class="fas fa-star" style="color: #f6ad55; margin-right: 4px;"></i>
+                                <i class="fas fa-star" style="color: #f6ad55; margin-right: 4px;"></i>
+                                <i class="fas fa-star" style="color: #f6ad55; margin-right: 4px;"></i>
+                            </div>
+                            
+                            <!-- TESTIMONIAL TITLE -->
+                            <h4 style="font-size: 20px; font-weight: 700; margin: 0 0 16px 0; color: #243e63;">Amazing User Experience</h4>
+                            
+                            <!-- TESTIMONIAL QUOTE -->
+                            <blockquote style="font-size: 16px; color: #4a5568; line-height: 1.5; margin: 0 0 40px 0; font-weight: 500;">
+                                "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            </blockquote>
+                            
+                            <!-- CUSTOMER INFO AND NAVIGATION -->
+                            <div class="customer" style="display: flex; justify-content: space-between; align-items: center;">
+                                <!-- CUSTOMER PROFILE -->
+                                <div class="customer__info" style="display: flex; align-items: center;">
+                                    <img src="https://images.unsplash.com/photo-1494790108755-2616b9b9b57a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&w=160&h=160&q=80" alt="Customer" style="width: 80px; height: 80px; border-radius: 500px; margin-right: 24px;">
+                                    <div>
+                                        <p style="font-size: 20px; font-weight: 700; margin: 0; color: #243e63;">Charlotte Hale</p>
+                                        <p style="color: #7c8ba1; margin: 0;">Director, Delos Inc.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- NAVIGATION ARROWS -->
+                                <div class="testimonial__controls">
+                                    <button style="background: #edf2f7; border: none; width: 48px; height: 48px; border-radius: 500px; margin-right: 12px; cursor: pointer;">
+                                        <i class="fas fa-arrow-left" style="color: #6415ff;"></i>
+                                    </button>
+                                    <button style="background: #edf2f7; border: none; width: 48px; height: 48px; border-radius: 500px; cursor: pointer;">
+                                        <i class="fas fa-arrow-right" style="color: #6415ff;"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- RIGHT SIDE - Love illustration -->
+                    <div class="testimonials__img" style="width: 50%;">
+                        <img src="https://treact.owaiskhan.me/static/media/love-illustration.2cb43a2c5c0d5a887e3b9d950d4c2b4e.svg" alt="Love illustration" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CALL-TO-ACTION SECTION - Final conversion push -->
+        <section id="start">
+            <div class="container" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; color: white;">
+                <div class="row" style="position: relative; overflow: hidden; padding: 96px 64px; text-align: center;">
+                    <!-- MAIN CTA HEADING -->
+                    <h2 style="font-size: 32px; font-weight: 700; margin: 0 0 32px 0;">Developers all over the world are happily using Treact.</h2>
+                    
+                    <!-- CTA BUTTONS -->
+                    <div class="cta__buttons" style="display: flex; justify-content: center; gap: 32px;">
+                        <button style="background: #f56565; color: white; border: none; padding: 20px 40px; border-radius: 500px; font-weight: 700; font-size: 16px; cursor: pointer;">Get Started</button>
+                        <button style="background: transparent; color: white; border: 1px solid white; padding: 20px 40px; border-radius: 500px; font-weight: 700; font-size: 16px; cursor: pointer;">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER SECTION - Site links and company info -->
+    <footer>
+        <div class="row footer__row">
+            <!-- FOOTER LINKS GRID (5 columns) -->
+            <div class="links" style="display: flex; flex-wrap: wrap;">
+                <!-- COLUMN 1: Main links -->
+                <div class="link" style="display: flex; flex-direction: column; width: calc(100%/5); align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: 700; color: white; margin: 0 0 24px 0; letter-spacing: 1.6px;">MAIN</h3>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Blog</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">FAQs</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Support</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">About Us</a>
+                </div>
+                
+                <!-- COLUMN 2: Product links -->
+                <div class="link" style="display: flex; flex-direction: column; width: calc(100%/5); align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: 700; color: white; margin: 0 0 24px 0; letter-spacing: 1.6px;">PRODUCT</h3>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Log In</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Personal</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Business</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Team</a>
+                </div>
+                
+                <!-- COLUMN 3: Press links -->
+                <div class="link" style="display: flex; flex-direction: column; width: calc(100%/5); align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: 700; color: white; margin: 0 0 24px 0; letter-spacing: 1.6px;">PRESS</h3>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Logos</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Events</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Stories</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Office</a>
+                </div>
+                
+                <!-- COLUMN 4: Team links -->
+                <div class="link" style="display: flex; flex-direction: column; width: calc(100%/5); align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: 700; color: white; margin: 0 0 24px 0; letter-spacing: 1.6px;">TEAM</h3>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Career</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Founders</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Culture</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Onboarding</a>
+                </div>
+                
+                <!-- COLUMN 5: Legal links -->
+                <div class="link" style="display: flex; flex-direction: column; width: calc(100%/5); align-items: center;">
+                    <h3 style="font-size: 16px; font-weight: 700; color: white; margin: 0 0 24px 0; letter-spacing: 1.6px;">LEGAL</h3>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">GDPR</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Privacy Policy</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Terms of Service</a>
+                    <a href="#" style="color: white; text-decoration: none; margin: 12px 0; opacity: 0.7;">Disclaimer</a>
+                </div>
+            </div>
+            
+            <!-- FOOTER BOTTOM - Logo, copyright, and social links -->
+            <div class="footer__info" style="display: flex; justify-content: space-between; align-items: center; margin-top: 64px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2);">
+                <!-- COMPANY LOGO AND NAME -->
+                <div class="footer__logo" style="display: flex; align-items: center;">
+                    <img src="https://treact.owaiskhan.me/static/media/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="Treact Logo" style="height: 32px;">
+                    <h3 style="margin-left: 12px; font-weight: 900; color: white;">Treact Inc.</h3>
+                </div>
+                
+                <!-- COPYRIGHT TEXT -->
+                <p style="color: white; opacity: 0.7; margin: 0;">© 2018 Treact Inc. All Rights Reserved.</p>
+                
+                <!-- SOCIAL MEDIA ICONS -->
+                <div class="social__links" style="display: flex; gap: 16px;">
+                    <a href="#" style="color: white; background: rgba(255,255,255,0.1); width: 32px; height: 32px; border-radius: 500px; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" style="color: white; background: rgba(255,255,255,0.1); width: 32px; height: 32px; border-radius: 500px; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" style="color: white; background: rgba(255,255,255,0.1); width: 32px; height: 32px; border-radius: 500px; display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
